@@ -1,3 +1,10 @@
 a = int(input())
 b = int(input())
-print(a+b)
+
+
+def adding():
+    print(a+b)
+
+
+def deviding():
+    print(a/b)
