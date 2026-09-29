@@ -8,3 +8,7 @@ def adding():
 
 def deviding():
     print(a/b)
+
+
+def minus():
+    print(a-b)
