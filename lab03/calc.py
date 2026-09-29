@@ -9,7 +9,18 @@ def adding():
 def deviding():
     if b!=0:
         print(a/b)
-
+    else:
+        print("На ноль делить нельзя")
 
 def minus():
     print(a-b)
+
+
+def multiplication():
+    print(a*b)
+
+
+adding()
+deviding()
+minus()
+multiplication()
