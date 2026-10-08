@@ -13,4 +13,5 @@ def main():
         print("%.1f" % average_by_city(records)[best])
 
 
-main()
+if __name__ == "__main__":
+    main()

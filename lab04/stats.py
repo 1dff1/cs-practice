@@ -1,6 +1,3 @@
-import sys
-
-
 def parse_record(line: str) -> dict:
     data = line.split(";")
     if len(data) != 3:
