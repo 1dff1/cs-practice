@@ -29,21 +29,19 @@ def read_valid(lines: list[str]) -> list[dict]:
 
 
 def average_by_city(records: list[dict]) -> dict:
-    total = {}
+    summ = {}
     count = {}
     for record in records:
         city = record["city"]
-        total[city] = total.get(city, 0.0) + record["temperature"]
+        summ[city] = summ.get(city, 0.0) + record["temperature"]
         count[city] = count.get(city, 0) + 1
-
-    return {city: round(total[city] / count[city],) for city in total}
+    return {city: round(summ[city] / count[city],) for city in summ}
 
 
 def warmest_city(records: list[dict]) -> str:
     averages = average_by_city(records)
     if not averages:
         raise ValueError("Invalid records")
-
     best = None
     for city in sorted(averages):
         if best is None or averages[city] > averages[best]:
