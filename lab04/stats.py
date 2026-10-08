@@ -1,4 +1,5 @@
 def parse_record(line: str) -> dict:
+    line = line.replace(' ', '')
     data = line.split(";")
     if len(data) != 3:
         raise ValueError(f"Expect 3 arguments, got {len(data)}")
@@ -9,7 +10,7 @@ def parse_record(line: str) -> dict:
     try:
         temperature = float(data[1])
     except ValueError:
-        raise ValueError(f"Temperature is not a number: {data[1]!r}")
+        raise ValueError(f"Temperature is not a number: {data[1]}")
     return {"city": city, "temperature": temperature, "date": date}
 
 
